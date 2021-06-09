@@ -3,19 +3,40 @@
      <head>
           <title>Najmil Haqim</title>
           <link rel="icon" href="https://cdn.icon-icons.com/icons2/1492/PNG/64/art-pallete_102830.png" type="image/icon type">
+          <script>
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+          </script>
+          <style>
+          iframe {
+            height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+            height: calc(var(--vh, 1vh) * 100);
+            margin: 0 auto;
+                }
+
+          body {
+              min-height: 100vh;
+                /* mobile viewport bug fix */
+              min-height: -webkit-fill-available;
+                }
+
+          html {
+              height: -webkit-fill-available;
+               }
+
+          </style>
      </head>
 
-     <body style="background-color:#d1d0cd"
-          >
-
+     <body style="background-color:#d1d0cd">
           <center>
           <iframe
                width=100%
                min-width=1vh
-               height=1500vh, auto
+               height=1000vh
                frameborder="0"
                scrolling="no"
-               src="https://drive.google.com/file/d/1N2nMdPAltFsQ9sOFYK-JtmAXqEBjuUKX/preview">
+               src="https://drive.google.com/file/d/1N2nMdPAltFsQ9sOFYK-JtmAXqEBjuUKX/preview"
+
           </iframe>
           </center>
      </body>
